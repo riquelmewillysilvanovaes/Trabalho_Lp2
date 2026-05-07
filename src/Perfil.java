@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+public class Perfil {
+
+    private String nome;
+    private String cpf;
+    private String email;
+    private double bonus;
+    private ArrayList<Conta> contas;
+
+    public Perfil(String nome, String cpf, String email) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.bonus = 0;
+        this.contas = new ArrayList<>();
+    }
+
+    // ---- Getters e Setters ----
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
+
+    public ArrayList<Conta> getContas() {
+        return contas;
+    }
+
+    /**
+     * Adiciona uma conta ao histórico do cliente.
+     */
+    public void adicionarConta(Conta c) {
+        this.contas.add(c);
+    }
+
+    @Override
+    public String toString() {
+        return "Perfil [nome=" + nome + ", cpf=" + cpf
+                + ", email=" + email
+                + ", bonus=R$ " + String.format("%.2f", bonus) + "]";
+    }
+}
