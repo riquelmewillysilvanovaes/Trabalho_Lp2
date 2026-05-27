@@ -100,11 +100,4 @@ public class Restaurante {
         }
         return null;
     }
-
-    @Override
-    public String toString() {
-        return "Restaurante [perfis=" + perfis.size()
-                + ", cardapio=" + cardapio.size()
-                + ", contasAtivas=" + contasAtivas.size() + "]";
-    }
 }

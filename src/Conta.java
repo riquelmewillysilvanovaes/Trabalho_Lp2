@@ -44,8 +44,10 @@ public class Conta {
      * Adiciona um pedido à conta e atualiza o saldo devedor.
      */
     public void adicionarPedido(Pedido p) {
-        this.pedidos.add(p);
-        this.saldoDevedor += p.calcularTotal();
+        if (isAberta()) {
+            this.pedidos.add(p);
+            this.saldoDevedor += p.calcularTotal();
+        }
     }
 
     /**
@@ -88,17 +90,5 @@ public class Conta {
         cliente.setBonus(cliente.getBonus() + bonusGerado);
 
         this.saldoDevedor = 0;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Conta do cliente: ").append(cliente.getNome());
-        sb.append(" | Aberta: ").append(isAberta);
-        sb.append(" | Saldo Devedor: R$ ").append(String.format("%.2f", saldoDevedor)).append("\n");
-        for (Pedido p : pedidos) {
-            sb.append(p.toString()).append("\n");
-        }
-        return sb.toString();
     }
 }

@@ -56,17 +56,4 @@ public class Pedido {
         }
         return total;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Pedido #").append(id);
-        sb.append(" | Aberto: ").append(isAberto);
-        sb.append(" | Entregue: ").append(isEntregue).append("\n");
-        for (ItemPedido ip : itens) {
-            sb.append("  - ").append(ip.toString()).append("\n");
-        }
-        sb.append("  Total: R$ ").append(String.format("%.2f", calcularTotal()));
-        return sb.toString();
-    }
 }

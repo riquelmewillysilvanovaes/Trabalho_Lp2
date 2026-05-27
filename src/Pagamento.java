@@ -55,14 +55,4 @@ public class Pagamento {
     public double calcularBonusGerado() {
         return valorPagar * 0.10;
     }
-
-    @Override
-    public String toString() {
-        return "Pagamento [tipo=" + tipo
-                + ", data=" + data
-                + ", valorPagar=R$ " + String.format("%.2f", valorPagar)
-                + ", bonusUsado=R$ " + String.format("%.2f", bonusUsado)
-                + ", bonusGerado=R$ " + String.format("%.2f", calcularBonusGerado())
-                + "]";
-    }
 }

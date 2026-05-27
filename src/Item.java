@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Item {
 
     private String nome;
@@ -63,16 +61,5 @@ public class Item {
 
     public boolean isBebida() {
         return fornecedor != null;
-    }
-
-    @Override
-    public String toString() {
-        if (isComida()) {
-            return "Comida: " + nome + " | R$ " + String.format("%.2f", preco)
-                    + " | Ingredientes: " + Arrays.toString(descricao);
-        } else {
-            return "Bebida: " + nome + " | R$ " + String.format("%.2f", preco)
-                    + " | Fornecedor: " + fornecedor;
-        }
     }
 }

@@ -60,11 +60,4 @@ public class Perfil {
     public void adicionarConta(Conta c) {
         this.contas.add(c);
     }
-
-    @Override
-    public String toString() {
-        return "Perfil [nome=" + nome + ", cpf=" + cpf
-                + ", email=" + email
-                + ", bonus=R$ " + String.format("%.2f", bonus) + "]";
-    }
 }

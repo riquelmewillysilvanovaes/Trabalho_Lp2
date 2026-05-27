@@ -32,10 +32,4 @@ public class ItemPedido {
     public double getSubtotal() {
         return item.getPreco() * quantidade;
     }
-
-    @Override
-    public String toString() {
-        return item.getNome() + " x" + quantidade
-                + " = R$ " + String.format("%.2f", getSubtotal());
-    }
 }
