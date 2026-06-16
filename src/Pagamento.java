@@ -15,7 +15,6 @@ public class Pagamento {
     }
 
     // ---- Getters e Setters ----
-
     public String getTipo() {
         return tipo;
     }

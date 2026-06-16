@@ -9,7 +9,6 @@ public class ItemPedido {
     }
 
     // ---- Getters e Setters ----
-
     public Item getItem() {
         return item;
     }

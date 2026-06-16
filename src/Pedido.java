@@ -17,7 +17,6 @@ public class Pedido {
     }
 
     // ---- Getters e Setters ----
-
     public ArrayList<ItemPedido> getItens() {
         return itens;
     }
