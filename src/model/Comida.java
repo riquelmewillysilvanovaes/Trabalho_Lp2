@@ -1,3 +1,5 @@
+package model;
+
 public class Comida extends Item {
     protected String ingredientes;
 

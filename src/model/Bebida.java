@@ -1,3 +1,5 @@
+package model;
+
 public class Bebida extends Item {
     protected String fornecedor;
 

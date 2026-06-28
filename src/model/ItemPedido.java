@@ -1,3 +1,5 @@
+package model;
+
 public class ItemPedido {
 
     private Item item;
